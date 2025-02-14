@@ -21,8 +21,9 @@ function getComputerChoice(computerChoice) {
         return computerChoice = "rock";
     } else if (computerChoice === 1) {
         return computerChoice = "paper";
-    } else (computerChoice === 2) 
+    } else { (computerChoice === 2) 
         return computerChoice = "scissors";
+    }
 }
 
 /*
