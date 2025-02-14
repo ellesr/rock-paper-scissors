@@ -37,5 +37,18 @@ print with console.log
 let humanChoice;
 
 function getHumanChoice(humanChoice) {
+    humanChoice = prompt('Please enter one of the following: "rock", "paper", or "scissors":');
+    humanChoice = humanChoice.toLowerCase();
 
+    if (humanChoice === "rock") {
+        return humanChoice = "rock";
+    } else if (humanChoice === "paper") {
+        return humanChoice = "paper";
+    } else if (humanChoice === "scissors") {
+        return humanChoice = "scissors";
+    } else {
+        return prompt('Please enter a valid option.');
+    }
 }
+
+console.log(getHumanChoice(humanChoice));
