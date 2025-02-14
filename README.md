@@ -1,1 +1,2 @@
 # rock-paper-scissors
+This simple rock-paper-scissors game played in the console demonstrates the JavaScript coding and problem-solving skills I have gained thusfar throughout the Odin Project. Have fun!
