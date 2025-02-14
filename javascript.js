@@ -84,3 +84,9 @@ function playRound(humanChoice, computerChoice) {
     } else (computerChoice == humanChoice) 
         return console.log("It's a tie!")
 }
+
+/*
+Write a function named playGame that calls playRound 5 times
+Logs the new score after each round
+Declares a winner at the end
+*/
