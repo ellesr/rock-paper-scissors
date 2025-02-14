@@ -64,8 +64,6 @@ else computerChoice > humanChoice, increment computer score, print "you lost thi
 else increment human score, print "you won this round"
 */
 
-playRound(humanChoice, computerChoice);
-
 function playRound(humanChoice, computerChoice) {
     humanChoice = getHumanChoice(humanChoice);
     computerChoice = getComputerChoice(computerChoice);
@@ -75,18 +73,37 @@ function playRound(humanChoice, computerChoice) {
         || humanChoice == "scissors" && computerChoice == "paper"
         || humanChoice == "paper" && computerChoice == "rock") {
         ++humanScore;
-        return console.log('You won this round!')
+        return console.log('You won this round!');
     } else if (computerChoice == "rock" && humanChoice == "scissors" 
         || computerChoice == "scissors" && humanChoice == "paper"
         || computerChoice == "paper" && humanChoice == "rock") {
         ++computerScore;
-        return console.log('You lost this round!')
-    } else (computerChoice == humanChoice) 
-        return console.log("It's a tie!")
+        return console.log('You lost this round!');
+    } else { (computerChoice == humanChoice) 
+        return console.log("It's a tie!");
+    }
 }
 
 /*
 Write a function named playGame that calls playRound 5 times
 Logs the new score after each round
+Compare scores
 Declares a winner at the end
 */
+
+playGame();
+
+function playGame() {
+    for (var i = 1; i < 6; i++) {
+        playRound(i);
+        console.log(`Your Score: ${humanScore}\nComputer's Score: ${computerScore}\n\n`);
+    }    
+
+    if (computerScore === humanScore) {
+        return console.log('Good effort! You tied the game!');
+    } else if (computerScore > humanScore) {
+        return console.log('So sad! You lost the game!');
+    } else { (humanScore > computerScore) 
+        return console.log('Congratulations! You won the game!');
+    }
+}
