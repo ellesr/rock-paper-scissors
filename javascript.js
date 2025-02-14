@@ -52,3 +52,13 @@ function getHumanChoice(humanChoice) {
     }
 }
 
+let humanScore = 0;
+let computerScore = 0;
+
+/*
+write a function that takes the human and computer player choices as arguments
+plays a single round
+increments the round winner’s score
+logs a winner announcement
+*/
+
