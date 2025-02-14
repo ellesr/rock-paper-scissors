@@ -25,4 +25,17 @@ function getComputerChoice(computerChoice) {
         return computerChoice = "scissors";
 }
 
-console.log(getComputerChoice(computerChoice));
+/*
+create function getHumanChoice
+prompt for string "rock" "paper" "scissors"
+convert to lower case
+if it doesnt match "rock" "paper" "scissors" prompt "try again"
+else it does match, return string 
+print with console.log
+*/
+
+let humanChoice;
+
+function getHumanChoice(humanChoice) {
+
+}
