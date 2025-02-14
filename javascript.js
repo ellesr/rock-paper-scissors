@@ -21,9 +21,8 @@ function getComputerChoice(computerChoice) {
         return computerChoice = "rock";
     } else if (computerChoice === 1) {
         return computerChoice = "paper";
-    } else (computerChoice === 2) {
+    } else (computerChoice === 2) 
         return computerChoice = "scissors";
-    }
 }
 
 /*
@@ -57,13 +56,31 @@ let computerScore = 0;
 
 /*
 write a function that takes the human and computer player choices as arguments
-plays a single round by comparing strings
+log each choice
+plays a single round
 let rock > scissors, scissors > paper, paper > rock
 if humanChoice === computerChoice, tie and no increment, print tie
-else computerChoice > humanChoice, increment computer score, print "you lost"
-else increment human score, print "you won"
+else computerChoice > humanChoice, increment computer score, print "you lost this round"
+else increment human score, print "you won this round"
 */
 
+playRound(humanChoice, computerChoice);
+
 function playRound(humanChoice, computerChoice) {
-    
+    humanChoice = getHumanChoice(humanChoice);
+    computerChoice = getComputerChoice(computerChoice);
+    console.log(`You chose ${humanChoice}. The computer chose ${computerChoice}.`);
+
+    if (humanChoice == "rock" && computerChoice == "scissors" 
+        || humanChoice == "scissors" && computerChoice == "paper"
+        || humanChoice == "paper" && computerChoice == "rock") {
+        ++humanScore;
+        return console.log('You won this round!')
+    } else if (computerChoice == "rock" && humanChoice == "scissors" 
+        || computerChoice == "scissors" && humanChoice == "paper"
+        || computerChoice == "paper" && humanChoice == "rock") {
+        ++computerScore;
+        return console.log('You lost this round!')
+    } else (computerChoice == humanChoice) 
+        return console.log("It's a tie!")
 }
