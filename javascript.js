@@ -57,8 +57,13 @@ let computerScore = 0;
 
 /*
 write a function that takes the human and computer player choices as arguments
-plays a single round
-increments the round winner’s score
-logs a winner announcement
+plays a single round by comparing strings
+let rock > scissors, scissors > paper, paper > rock
+if humanChoice === computerChoice, tie and no increment, print tie
+else computerChoice > humanChoice, increment computer score, print "you lost"
+else increment human score, print "you won"
 */
 
+function playRound(humanChoice, computerChoice) {
+    
+}
