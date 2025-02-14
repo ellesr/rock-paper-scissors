@@ -67,7 +67,7 @@ else increment human score, print "you won this round"
 function playRound(humanChoice, computerChoice) {
     humanChoice = getHumanChoice(humanChoice);
     computerChoice = getComputerChoice(computerChoice);
-    console.log(`You chose ${humanChoice}. The computer chose ${computerChoice}.`);
+    console.log(`You chose ${humanChoice.toLowerCase()}. The computer chose ${computerChoice}.`);
 
     if (humanChoice == "rock" && computerChoice == "scissors" 
         || humanChoice == "scissors" && computerChoice == "paper"
