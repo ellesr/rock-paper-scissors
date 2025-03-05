@@ -79,12 +79,11 @@ titleContent.textContent = 'Choose your player!';
 titleContent.style.cssText = "color: black; font-size: 50px;";
 title.appendChild(titleContent);
 
-
 const result = document.querySelector("#results");
 
 const choiceContent = document.createElement("div");
 choiceContent.classList.add("choiceContent");
-choiceContent.style.cssText = "color: black; font-size: 25px;";
+choiceContent.style.cssText = "color: navy; font-size: 25px;";
 result.appendChild(choiceContent);
 
 const winnerContent = document.createElement("div");
