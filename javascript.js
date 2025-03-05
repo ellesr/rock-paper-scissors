@@ -26,27 +26,22 @@ btn.forEach(button => {
 
 function playRound(humanChoice, computerChoice) {
     choiceContent.textContent = `You chose ${humanChoice}. The computer chose ${computerChoice}.`;
-    console.log(`You chose ${humanChoice}. The computer chose ${computerChoice}.`);
 
     if (humanChoice == "rock" && computerChoice == "scissors" 
         || humanChoice == "scissors" && computerChoice == "paper"
         || humanChoice == "paper" && computerChoice == "rock") {
         ++humanScore;
         winnerContent.textContent = 'You won this round!';
-        console.log('You won this round!');
     } else if (computerChoice == "rock" && humanChoice == "scissors" 
         || computerChoice == "scissors" && humanChoice == "paper"
         || computerChoice == "paper" && humanChoice == "rock") {
         ++computerScore;
         winnerContent.textContent = 'You lost this round!';
-        console.log('You lost this round!');
     } else { (computerChoice == humanChoice) 
         winnerContent.textContent = "It's a tie!";
-        console.log("It's a tie!");
     }
 
     scoreContent.textContent = `Your Score: ${humanScore}\nComputer's Score: ${computerScore}`;
-    console.log(`Your Score: ${humanScore}\nComputer's Score: ${computerScore}\n\n`);
     playGame();
 }
 
@@ -54,13 +49,10 @@ function playGame() {
     if (humanScore + computerScore >= 5) {
         if (computerScore === humanScore) {
             winnerContent.textContent = 'Good effort! You tied the game!';
-            console.log('Good effort! You tied the game!');
         } else if (computerScore > humanScore) {
             winnerContent.textContent = 'So sad! You lost the game!';
-            console.log('So sad! You lost the game!');
         } else { (humanScore > computerScore) 
             winnerContent.textContent = 'Congratulations! You won the game!';
-            console.log('Congratulations! You won the game!');
         }
         resetGame();
     }
@@ -69,7 +61,6 @@ function playGame() {
 function resetGame() {
     humanScore = 0;
     computerScore = 0;
-    console.log(`\n* * * Begin New Game * * *\n\n`);
 }
 
 const title = document.querySelector("#title");
